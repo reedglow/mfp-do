@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <server description="new server">
+<jndiEntry jndiName="DevOpsDemo/mfp.db.cloudant.username" value="xxx"/>
+<jndiEntry jndiName="DevOpsDemo/mfp.db.cloudant.password" value="xxx"/>
+<jndiEntry jndiName="DevOpsDemo/mfp.db.cloudant.url" value="xxx"/>
+ <application id="DevOpsDemo" location="DevOpsDemo.war" name="DevOpsDemo" type="war">
+     <classloader delegation="parentLast">
+         <privateLibrary id="worklightlib_DevOpsDemo">
+             <fileset dir="${shared.resource.dir}/lib" includes="worklight-jee-library.jar"/>
+             <fileset dir="${wlp.install.dir}/lib" includes="com.ibm.ws.crypto.passwordutil*.jar"/>
+         </privateLibrary>
+     </classloader>
+ </application>
+ </server>
